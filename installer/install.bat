@@ -130,7 +130,7 @@ bcdboot %~1\Windows /s S: /f UEFI || exit /b 1
 if not "%SECURE_BOOT%"=="TRUE" (
 	bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on || exit /b 1
 	bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set {default} nointegritychecks on || exit /b 1
-	rem bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set {default} recoveryenabled no || exit /b 1
+	bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set {default} recoveryenabled no || exit /b 1
 )
 exit /b
 :indexlookup
