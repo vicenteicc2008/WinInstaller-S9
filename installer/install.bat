@@ -35,7 +35,6 @@ echo    Drivers And UEFI: %MAINTAINER%
 echo ============================================================
 echo(
 if not exist "%~d0\boot.img" echo Failed to find the boot image. & goto fail
-if not exist "%~dp0sta.exe" echo Failed to find sta.exe. & goto fail
 "%~dp0sta" -p "%~d0\boot.img" -n || echo Failed to flash the boot image. && goto fail
 
 echo(
