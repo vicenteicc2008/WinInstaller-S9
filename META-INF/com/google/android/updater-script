@@ -121,7 +121,6 @@ for var in ESP_PART_NAME DEVICE_NAME WI_VERSION BUID_DATE SECURE_BOOT MAINTAINER
   sed -i "s|^set $var=.*|set $var=$value|" "$PE_INSTALLER"
 done
 package_extract_folder "ToolBox" "$WIN_MOUNT_FOLDER"
-package_extract_file "woahelper.apk" "/sdcard/woahelper.apk"
 print_line
 print_centered "Flashing UEFI image"
 rm /sdcard/UEFI/*.img
